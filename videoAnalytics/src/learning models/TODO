@@ -1,10 +1,10 @@
 
 	Input: entries from "Table_personal_info"
 
-	Output: individual learning models corresponding to each person's features
+	Output: multilabel image classifier, which classify a person using his face image
 
 	Process
 		1. Extract the identification details of a person_id
-		2. Gernerate a learning model, CNN
-		3. Trian this models using the face images, empolyee number of the person
+		2. Gernerate a multilabel image classifier model, CNN
+		3. Trian this models using the face images
 			 	

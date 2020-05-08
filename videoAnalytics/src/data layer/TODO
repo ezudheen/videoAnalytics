@@ -1,6 +1,5 @@
 
-
-	Input: vedio stream form camera, person_ids
+	Input: vedio stream form camera, multilabel_image_classifier
 		
 	Output: Entries to "Table_raw_location_info" and "Table_frame_details"
 
@@ -8,10 +7,12 @@
 
 		1. Slice the vedio input to images based on a given frame rate
 		2. Generate table entries to "Table_frame_details" 
-		3. Compare the the image with its predecessor and compted a differentiator
+		3. Compare the the image with its predecessor and compute a differentiator
 		4. Compare the computed differnciator with a threshold value
 		5. Filter the images based on the above comparison and select a minimal set of useful images
-		6. Check the presence of person_ids in the image
+		7. Extract the face objects from the image
+		6. Classify the face object using the "multilabel_image_classifier" 
 		7. Generate a table entry to "Table_raw_location_info" based on the above step
+
 
 
