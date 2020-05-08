@@ -1,0 +1,65 @@
+				
+	---------------------Presentation layer---------------------
+
+	Input: Person ID, start time,  start date,  end time,  end date
+	
+	Output: Generate the route of the person during this time interval, Persons who are located near to this route
+	
+
+	---------------------Business layer---------------------
+
+	Input: 	Entries from "Table_raw_location_info", "Table_frame_details" and "Table_camera_info"
+
+	Output: Entries to "Table_actual_location_info"
+
+	Process
+		1. Chose an entry from "Table_raw_location_info"
+		2. Compute its time information the details from "Table_frame_details"
+		3. Comptue its actual location information using the details from "Table_camera_info"
+		4. Generate a "Table_actual_location_info" entry
+	
+	---------------------Data layer---------------------
+
+	Input: vedio stream form camera, learning models
+		
+	Output: Entries to "Table_raw_location_info" and "Table_frame_details"
+
+	Process
+
+		1. Slice the vedio input to images based on a given frame rate
+		2. Generate table entries to "Table_frame_details" 
+		3. Compare the the image with its predecessor and compted a differentiator
+		4. Compare the computed differnciator with a threshold value
+		5. Filter the images based on the above comparison and select a minimal set of useful images
+		6. Check the presence of person_ids in the image
+			6.1 Classify the image using the learing model corresponding to the person_id
+		7. Generate a table entry to "Table_raw_location_info" based on the above step
+
+	---------------------Learning Models----------------------
+
+	Input: entries from "Table_personal_info"
+
+	Output: individual learning models corresponding to each person's features
+
+	Process
+		1. Extract the identification details of a person_id
+		2. Gernerate a image classifier model, CNN
+		3. Trian this models using the face images, empolyee number of the person
+			 	
+	---------------------Data Base---------------------
+
+			Tables
+
+				1. Table_personal_info: Personal details
+					<person_id, face_image, employee_number>
+				2. Table_raw_location_info: Information exctraced from vedio processing
+					<person_id, vedio_image_id, pixel_cordinate_x, pixel_cordinate_y>	
+				3. Table_actual_location_info: Location information comuted by Business Layer
+					<person_id, location_x, location_y, location_z, time, date>
+				4. Table_camera_info: Camera information
+					<camera_id, location_x, location_y, location_z, distance_to_floor, angle_of_camera>
+				5. Table_frame_details: Frame image information
+					<image_id, camera_id, date, time> 
+				
+---------------------------------------------------------------------------------------------------------------------------
+

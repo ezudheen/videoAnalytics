@@ -1,0 +1,12 @@
+
+
+	Input: Person ID, start time,  start date,  end time,  end date
+	
+	Output: Generate the route of the person during this time interval, Persons who are located near to this route
+
+	Process:
+		1. select all the entries corresponding to the person ID during this period
+		2. sort the entries based on time
+		3. generate a graph based on thsed etries with time as x-axis and location as y-axis
+		4. mark the IDs of Persons who are located near to this graph
+

@@ -1,0 +1,11 @@
+
+	Input: 	Entries from "Table_raw_location_info", "Table_frame_details" and "Table_camera_info"
+
+	Output: Entries to "Table_actual_location_info"
+
+	Process
+		1. Chose an entry from "Table_raw_location_info"
+		2. Compute its time information the details from "Table_frame_details"
+		3. Comptue its actual location information using the details from "Table_camera_info"
+		4. Generate a "Table_actual_location_info" entry
+
