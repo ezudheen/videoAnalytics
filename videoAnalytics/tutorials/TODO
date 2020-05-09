@@ -1,1 +1,22 @@
 	Add sample useful tutorials to this folder
+
+
+	https://github.com/timesler/facenet-pytorch
+
+	https://www.kaggle.com/timesler/facial-recognition-model-in-pytorch
+
+	MTCCN Extracting the face objects from the images
+
+	https://towardsdatascience.com/face-detection-with-deep-learning-using-multi-tasked-cascased-cnn-8721435531d5
+
+	VGGFace identifiying face
+
+	https://machinelearningmastery.com/how-to-perform-face-recognition-with-vggface2-convolutional-neural-network-in-keras/
+
+	https://machinelearningmastery.com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/
+
+	https://medium.com/@vijayabhaskar96/multi-label-image-classification-tutorial-with-keras-imagedatagenerator-cd541f8eaf24
+
+	Learning Models
+
+	https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/

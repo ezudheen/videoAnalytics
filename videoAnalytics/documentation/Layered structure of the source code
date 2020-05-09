@@ -1,4 +1,17 @@
-				
+	--------------------Graphical User Interface------------------------
+
+	Functionalities
+		1. Locate the training images
+		2. Upload the person_id to image, number mapping as a .csv file and store it in the 
+			Data base table named "Table_personal_info"	
+		3. Train the Learning model using the images and entries from "Table_personal_info"
+		4. Uplaod the camera/vedio file details and fill the table "Table_camera_info"
+		4. Locate the vedio files
+		5. Generate the location information and fill the table "Table_actual_location_info"
+			5.1 Use the Business layer functionalities
+		6. Enter a person_id and generate his Route
+			6.1 Use the Presentation layer functionalities 
+		
 	---------------------Presentation layer---------------------
 
 	Input: Person ID, start time,  start date,  end time,  end date
@@ -31,20 +44,45 @@
 		3. Compare the the image with its predecessor and compute a differentiator
 		4. Compare the computed differnciator with a threshold value
 		5. Filter the images based on the above comparison and select a minimal set of useful images
-		7. Extract the face objects from the image
-		6. Classify the face object using the "multilabel_image_classifier" 
-		7. Generate a table entry to "Table_raw_location_info" based on the above step
+		6. Extract the face objects from the image
+			6.1 Use the function named "Object_Identifier" form Learing Models
+		7. Classify the face object using the "multilabel_image_classifier" 
+			7.1 Use the function named "Image_Classifier" form Learing Models
+		8. Generate a table entry to "Table_raw_location_info" based on the above step
 
 	---------------------Learning Models----------------------
 
+	Function: Object_Identifier
+
+	Input: an Image file, Image identifier
+
+	Output: A set of images (objects of type face)
+
+	Process
+
+		1. Create a pretrained object classifier
+			1.1  MTCCN seems OK, please read the reference
+		2. Extract the face objects, compute the center of these face objects	
+		3. Returns a structure containing the <image, pixel_cordinate_x, pixel_cordinate_y>
+
+	References
+
+		1. https://towardsdatascience.com/face-detection-with-deep-learning-using-multi-tasked-cascased-cnn-8721435531d5
+
+
+ 	Function: Image_Classifier
 	Input: entries from "Table_personal_info"
 
 	Output: multilabel image classifier, which classify a person using his face image
 
 	Process
-		1. Extract the identification details of a person_id
+		1. Generate a training and testing set using the data from "Table_personal_info" 
 		2. Gernerate a multilabel image classifier model, CNN
-		3. Trian this models using the face images
+		3. Trian this models using the above data
+			 	
+	References
+
+		1. https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/
 			 	
 	---------------------Data Base---------------------
 

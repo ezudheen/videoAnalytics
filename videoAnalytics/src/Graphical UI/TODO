@@ -1,0 +1,13 @@
+	
+	Functionalities
+
+		1. Locate the training images
+		2. Upload the person_id to image, number mapping as a .csv file and store it in the 
+			Data base table named "Table_personal_info"	
+		3. Train the Learning model using the images and entries from "Table_personal_info"
+		4. Uplaod the camera/vedio file details and fill the table "Table_camera_info"
+		4. Locate the vedio files
+		5. Generate the location information and fill the table "Table_actual_location_info"
+			5.1 Use the Business layer functionalities
+		6. Enter a person_id and generate his Route
+			6.1 Use the Presentation layer functionalities 

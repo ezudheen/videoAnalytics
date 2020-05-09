@@ -1,10 +1,33 @@
 
+	Function: Object Identifier
+
+	Input: an Image file, Image identifier
+
+	Output: A set of images (objects of type face)
+
+	Process
+
+		1. Create a pretrained object classifier
+			1.1  MTCCN seems OK, please read the reference
+		2. Extract the face objects, compute the center of these face objects	
+		3. Returns a structure containing the <image, pixel_cordinate_x, pixel_cordinate_y>
+
+	References
+
+		1. https://towardsdatascience.com/face-detection-with-deep-learning-using-multi-tasked-cascased-cnn-8721435531d5
+
+
+ 	Function: Image Classifier
 	Input: entries from "Table_personal_info"
 
 	Output: multilabel image classifier, which classify a person using his face image
 
 	Process
-		1. Extract the identification details of a person_id
+		1. Generate a training and testing set using the data from "Table_personal_info" 
 		2. Gernerate a multilabel image classifier model, CNN
-		3. Trian this models using the face images
+		3. Trian this models using the above data
 			 	
+	References
+
+		1. https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/
+
