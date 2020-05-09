@@ -1,5 +1,5 @@
-#created by Navaneeth D
-#last updated by Navaneeth D(navaneethsdk@gmail.com) on 9/05/2020
+# created by Navaneeth D 
+# last updated by Navaneeth D(navaneethsdk@gmail.com) on 9/05/2020
 from matplotlib import pyplot
 from mtcnn.mtcnn import MTCNN
 #requirements before running . you should have MTCNN installed using
