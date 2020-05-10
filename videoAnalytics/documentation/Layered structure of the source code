@@ -18,6 +18,14 @@
 	
 	Output: Generate the route of the person during this time interval, Persons who are located near to this route
 	
+	Location info
+			|
+			|         x                                    x
+			|                        x
+			|  x                                                        x
+			|--------------------------------------------------------------------------->
+						Time axis
+
 
 	---------------------Business layer---------------------
 
