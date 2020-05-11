@@ -5,7 +5,7 @@ Make sure dlib has already been pre-installed, with python bindings
 Install the module using the statement  
 `pip3 install face_recognition`
 
-Faces can be detecte  using the command `face_detection`  
+Faces can be detected  using the command `face_detection`  
 All the images are stored in a folder.  
 
 Face Detection can be implemented by running the statement  
