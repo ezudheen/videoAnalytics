@@ -11,8 +11,14 @@
 			5.1 Use the Business layer functionalities
 		6. Enter a person_id and generate his Route
 			6.1 Use the Presentation layer functionalities 
+		7. List persons aroud a point
+			6.1 Use the Presentation layer functionalities 
+		8. List unknown persons
+			6.1 Use the Presentation layer functionalities 
 		
 	---------------------Presentation layer---------------------
+
+	1.
 
 	Input: Person ID, start time,  start date,  end time,  end date
 	
@@ -26,6 +32,30 @@
 			|--------------------------------------------------------------------------->
 						Time axis
 
+	2. Identify persons aroud a point
+
+	Input: Location ID, Radious, start time,  start date,  end time,  end date
+
+	Output: List all the persons present in a particular location within a specific radious during a period
+
+
+	3. List all persons
+
+	Input: start time,  start date,  end time,  end date
+
+	Output: List all the person present around all the cameras during the period
+
+	4. Identify Unknown persons
+
+	Input: Location ID, Radious, start time,  start date,  end time,  end date
+
+	Output: List all the unknown persons present in a particular location within a specific radious during a period
+
+	5. List all Unknown persons
+
+	Input: start time,  start date,  end time,  end date
+
+	Output: List all the unknown persons present around all the cameras during the period
 
 	---------------------Business layer---------------------
 
@@ -72,12 +102,7 @@
 			1.1  MTCCN seems OK, please read the reference
 		2. Extract the face objects, compute the center of these face objects	
 		3. Returns a structure containing the <image, pixel_cordinate_x, pixel_cordinate_y>
-
-	References
-
-		1. https://towardsdatascience.com/face-detection-with-deep-learning-using-multi-tasked-cascased-cnn-8721435531d5
-
-
+		
  	Function: Image_Classifier
 	Input: entries from "Table_personal_info"
 
@@ -87,10 +112,6 @@
 		1. Generate a training and testing set using the data from "Table_personal_info" 
 		2. Gernerate a multilabel image classifier model, CNN
 		3. Trian this models using the above data
-			 	
-	References
-
-		1. https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/
 			 	
 	---------------------Data Base---------------------
 
