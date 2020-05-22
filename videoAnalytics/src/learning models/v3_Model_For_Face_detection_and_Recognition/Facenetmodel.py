@@ -108,6 +108,19 @@ print(model.inputs)
 print(model.outputs)
 
 
+def extract_face_return_faces_coordinates(filename, required_size=(160, 160)):
+	# load image from file
+	image = Image.open(filename)
+	# convert to RGB, if needed
+	image = image.convert('RGB')
+	# convert to array
+	pixels = asarray(image)
+	# create the detector, using default weights
+	detector = MTCNN()
+	# detect faces in the image
+	results = detector.detect_faces(pixels)
+	return results
+
 
 # extract a single face from a given photograph
 def extract_face(filename, required_size=(160, 160)):
