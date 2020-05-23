@@ -1,9 +1,12 @@
+# Created by Ajay Ravindran, last updated on 23rd May 
 # Saves the coordinates of all faces found in images at a given directory to a json file
 
 from Facenetmodel import extract_face_return_faces_coordinates
 import os
 import json
 
+# This is the function to be invoked to find face coordinates in the images in a given folder
+# To be invoked in the presentation layer to receive face coordinates
 def find_face(folder_dir) :
 	with open("Face Coordinates.json","a+") as out :	# Face Coordinates of faces in each image at the given directory are stored in Face Coordinates.json file
 		for filename in os.listdir(folder_dir) :
@@ -26,4 +29,5 @@ def find_face(folder_dir) :
 			json_object = json.dumps(val, indent = 4)
 			out.write(json_object)
 			
-image_dir = '/home/ajay/DataLayer/SplitImages/Cam1 Photos'
+folder_dir = '/home/ajay/DataLayer/SplitImages/Cam1 Photos'
+find_face(folder_dir)
