@@ -1,3 +1,4 @@
+# Created by Ajay Ravindran, last updated on 23rd May
 # Splits a given video into frames of given interval
 
 import time
@@ -5,6 +6,8 @@ import cv2
 import json
 import os
 
+# On calling the function, the given video is split to frames of given interval and saved to a folder
+# Details of each frame is also saved in the json file "Pic Details.json"
 def video_to_frames(vid_name,videoDetails) :
 	# videoDetails is a list containing the specific Camera Name, Month, Date, start hour, start minute and start second of the video
 	
@@ -48,6 +51,7 @@ def video_to_frames(vid_name,videoDetails) :
 					extra_day += 1
 				cur_day = day + extra_day
 				
+				# Name of the saved image contains the camera name and specific time the frame was captured at
 				image_name = cam+"-"+mnth+str(cur_day)+" "+str(cur_hr)+":"+str(cur_mins)+":"+str(cur_sec)+".jpg"
 				cv2.imwrite(cur_dir+"/"+folder_name+"/"+image_name,frame)
 				
