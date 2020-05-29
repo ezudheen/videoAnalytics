@@ -1,0 +1,10 @@
+getPeopleInContact(DateTime startTime,DateTime endTime,int PersonId){
+  
+  
+  output:List {int PersonId,DateTime timeOfInteraction}
+}
+
+getCoordinatesOfPerson(DateTime startTime,DateTime endTime,int PersonId){
+
+  output: List{int xCoordinate,yCoordinate,String RoomName,int FloorNo}
+}
