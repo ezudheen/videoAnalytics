@@ -1,12 +1,59 @@
 
 
+	
+	1. Rout of a person
+
 	Input: Person ID, start time,  start date,  end time,  end date
 	
-	Output: Generate the route of the person during this time interval, Persons who are located near to this route
+	Output: Generate the route of the person during this time interval
+	
+	Location info
+			|
+			|         x                                    x
+			|                        x
+			|  x                                                        x
+			|--------------------------------------------------------------------------->
+						Time axis
+						
+	2. Contacts of a person
+	
+	Input: Person ID, Radious, start time,  start date,  end time,  end date
+	
+	Output: Generate the route of the person during this time interval, Persons who are located within the given Radious around this route
 
-	Process:
-		1. select all the entries corresponding to the person ID during this period
-		2. sort the entries based on time
-		3. generate a graph based on thsed etries with time as x-axis and location as y-axis
-		4. mark the IDs of Persons who are located near to this graph
+	3. Identify persons aroud a point
+
+	Input: Location ID, Radious, start time,  start date,  end time,  end date
+
+	Output: List all the persons present in a particular location within a specific radious during a period
+
+	4. List all persons
+
+	Input: start time,  start date,  end time,  end date
+
+	Output: List all the person present around all the cameras during the period
+
+	5. Identify Unknown persons
+
+	Input: Location ID, Radious, start time,  start date,  end time,  end date
+
+	Output: List all the unknown persons present in a particular location within a specific radious during a period
+
+	6. List all Unknown persons
+
+	Input: start time,  start date,  end time,  end date
+
+	Output: List all the unknown persons present around all the cameras during the period
+	
+	7. Distance covered by a person
+	
+	Input: Person ID, start time,  start date,  end time,  end date
+	
+	Output: Find the total distance covered and calory burned by the person
+	
+	8. Distance covered by all persons
+	
+	Input: start time,  start date,  end time,  end date
+	
+	Output: Find the total distance covered and calory burned by each person
 
