@@ -1,10 +1,10 @@
-getPeopleInContact(DateTime startTime,DateTime endTime,int PersonId){
+getPeopleInContact(DateTime startTime, DateTime endTime, int PersonId){
   
   
-  output:List {int PersonId,DateTime timeOfInteraction}
+  output:List {int PersonId, DateTime timeOfInteraction, int xCoordinate, int yCoordinate, String RoomName, int FloorNo}
 }
 
-getCoordinatesOfPerson(DateTime startTime,DateTime endTime,int PersonId){
+getCoordinatesOfPerson(DateTime startTime, DateTime endTime, int PersonId){
 
-  output: List{int xCoordinate,yCoordinate,String RoomName,int FloorNo}
+  output:List {int xCoordinate, int yCoordinate, String RoomName, int FloorNo}
 }
