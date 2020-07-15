@@ -1,0 +1,12 @@
+
+getDistanceCovered(int personId, Date startDate, Date endDate){
+
+    /*Processing done using:
+       distance_covered table
+    */
+
+    return list[
+        float distance_covered;
+        float calorie_burned;
+    ]
+}

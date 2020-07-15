@@ -1,0 +1,14 @@
+
+getRoute(int PersonId, DateTime startTime, DateTime endTime){
+    
+    /*Processing done using:
+        actual_location table
+    */
+
+    return list[
+        float xCoordinates;
+        float xCoordinates;
+        DateTime time;
+        int cameraId;
+    ]
+}

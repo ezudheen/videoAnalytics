@@ -1,0 +1,12 @@
+
+getUnknownPerson(int cameraId, int radius, DateTime startTime, DateTime endTime){
+
+    /*Processing done using:
+        unknown_person table
+    */
+
+    return list[
+        DateTime time;
+        string imageId;
+    ]
+}

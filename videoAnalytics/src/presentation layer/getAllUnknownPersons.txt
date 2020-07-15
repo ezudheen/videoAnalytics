@@ -1,0 +1,13 @@
+
+getAllUnknownPersons(DateTime startTime, DateTime endTime){
+
+    /*Processing done using:
+        unknown_person table
+    */
+
+    return list[
+        DateTime time;
+        int cameraId;
+        string imageId;
+    ]
+}

@@ -1,0 +1,12 @@
+
+getContacts(int personId, int radius, DateTime startTime, DateTime endTime){
+    
+    /*Processing done using:
+        actual_location table
+    */
+
+    return list[
+        int personId;
+        DateTime time;
+    ]
+}
